@@ -74,7 +74,7 @@ function displayData() {
   }
   tableProducts.innerHTML = DisplayProductForAdmin;
 }
-
+{/* <a href="../../products.html"></a> */}
 function displayProductAtHomePage() {
   let displayProductDetails = "";
   for (let i = 0; i < products.length; i++) {
@@ -103,5 +103,9 @@ function clearForm() {
   }
 }
 
-
+function deleteProduct(index){
+  products.splice(index, 1);
+  localStorage.setItem("productsList",JSON.stringify(products));
+  displayData();
+}
 
