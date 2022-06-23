@@ -59,18 +59,31 @@
                 <div class="row">
                     <div class="col">
                         <div class="add-product d-flex flex-column align-items-center">
-                            <h1>Add product</h1>
+                            <h1>Add Service</h1>
                             <div class="form-add-product w-50 border border-dark rounded p-3 m-3">
                                 <div class="mb-3">
                                     <label for="productName" class="form-label">Name</label>
                                     <input type="text" class="form-control" id="productName"
-                                        placeholder="product name" />
+                                        placeholder="service name" />
                                 </div>
                                 <div class="mb-3">
-                                    <label for="image1" class="form-label">Image1</label>
-                                    <input class="form-control images" type="file" id="image1"/>
+                                    <label for="productName" class="form-label">Description</label>
+                                    <input type="text" class="form-control" id="descriptionName"
+                                        placeholder="service description" />
+                                </div>
+                                <!-- <div class="mb-3">
+                                    <label for="image2" class="form-label">Image2</label>
+                                    <input class="form-control images" type="file" id="image2"/>
                                 </div>
                                 <div class="mb-3">
+                                    <label for="image3" class="form-label">Image3</label>
+                                    <input class="form-control images" type="file" id="image3"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="image4" class="form-label">Image4</label>
+                                    <input class="form-control images" type="file" id="image4"/>
+                                </div> -->
+                                <!-- <div class="mb-3">
                                     <label for="productPieces" class="form-label">Pieces</label>
                                     <input type="number" class="form-control" id="productPieces" placeholder="pieces" />
                                 </div>
@@ -83,10 +96,10 @@
                                     <label for="productSale" class="form-label">Sale</label>
                                     <input type="number" class="form-control" id="productSale"
                                         placeholder="product sale" />
-                                </div>
+                                </div> -->
                                 <div class="text-center">
-                                    <a href="#" class="btn btn-outline-primary" id="addProduct">Submit</a>
-                                    <a href="products.html" class="btn btn-outline-dark">Back</a>
+                                    <a href="#" class="btn btn-primary" id="addProduct">Submit</a>
+                                    <a href="services.html" class="btn btn-dark">Back</a>
                                 </div>
                             </div>
                         </div>
@@ -100,17 +113,16 @@
     <script src="assets\vendor\js\bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <!-- <script src="assets/js/script.js"></script> -->
-    <script src="assets/js/addProducts.js"></script>
+    <script src="assets/js/add-service.js"></script>
     <script>
         addBtn.addEventListener("click", function () {
-                loadImageAsBase64(function(base64) {
-                addProduct(base64);
+                // loadImageAsBase64(function(base64) {
+                addservice();
                 clearForm();
                 displayData();
-            });
+            // });
         });
     </script>
-
 </body>
 
 </html>
