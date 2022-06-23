@@ -7,12 +7,14 @@ let addBtn = document.querySelector("#addProduct");
 let tableProducts = document.querySelector("#bodyTable");
 let inputs = document.getElementsByClassName("form-control");
 let cardProducts = document.querySelector("#cardBody");
+let index;
 let count = 0;
 
+let products;
 if (localStorage.getItem("productsList") == null) {
-  var products = [];
+  products = [];
 } else {
-  var products = JSON.parse(localStorage.getItem("productsList"));
+  products = JSON.parse(localStorage.getItem("productsList"));
   count = products.length;
   displayData();
 }
@@ -51,9 +53,9 @@ function addProduct(imgBase64) {
 }
 
 function displayData() {
-  let result = "";
+  let DisplayProductForAdmin = "";
   for (let i = 0; i < products.length; i++) {
-    result += `
+    DisplayProductForAdmin += `
             <tr>
                 <th>${i + 1}</th>
                 <td class="w-25">${products[i].name}</td>
@@ -64,13 +66,13 @@ function displayData() {
                 <td>${products[i].price}</td>
                 <td>${products[i].sale}</td>
                 <td>
-                    <a href="../../updateProducts.html" class="btn btn-outline-primary" onclick="getProductData(${i})">update</a>
-                    <a href="" class="btn btn-outline-danger" onclick="deleteProduct(${i})">delete</a>
+                    <a href="updateProducts.html?id=${i}" class="btn btn-outline-primary" onclick="getProductData(${i})">update</a>
+                    <a href="#" class="btn btn-outline-danger" onclick="deleteProduct(${i})">delete</a>
                 </td>
             </tr>
         `;
   }
-  tableProducts.innerHTML = result;
+  tableProducts.innerHTML = DisplayProductForAdmin;
 }
 
 function displayProductAtHomePage() {
@@ -101,8 +103,5 @@ function clearForm() {
   }
 }
 
-function getProductData(index) {
-  console.log(index);
-}
 
-function updateProduct() {}
+

@@ -51,13 +51,13 @@
     </nav>
 
     <main>
-        <section class="add-product">
+        <section class="updateProduct">
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <div class="add-product d-flex flex-column align-items-center">
-                            <h1>Add product</h1>
-                            <div class="form-add-product w-50 border border-dark rounded p-3 m-3">
+                        <div class="update-product d-flex flex-column align-items-center">
+                            <h1>Update product</h1>
+                            <div class="form-update-product w-50 border border-dark rounded p-3 m-3">
                                 <div class="mb-3">
                                     <label for="productName" class="form-label">Name</label>
                                     <input type="text" class="form-control" id="productName"
@@ -67,18 +67,6 @@
                                     <label for="image1" class="form-label">Image1</label>
                                     <input class="form-control images" type="file" id="image1"/>
                                 </div>
-                                <!-- <div class="mb-3">
-                                    <label for="image2" class="form-label">Image2</label>
-                                    <input class="form-control images" type="file" id="image2"/>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="image3" class="form-label">Image3</label>
-                                    <input class="form-control images" type="file" id="image3"/>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="image4" class="form-label">Image4</label>
-                                    <input class="form-control images" type="file" id="image4"/>
-                                </div> -->
                                 <div class="mb-3">
                                     <label for="productPieces" class="form-label">Pieces</label>
                                     <input type="number" class="form-control" id="productPieces" placeholder="pieces" />
@@ -94,8 +82,8 @@
                                         placeholder="product sale" />
                                 </div>
                                 <div class="text-center">
-                                    <a href="#" class="btn btn-primary" id="addProduct">Submit</a>
-                                    <a href="products.html" class="btn btn-dark">Back</a>
+                                    <a href="products.html" class="btn btn-outline-primary" id="updateProduct">Update</a>
+                                    <a href="products.html" class="btn btn-outline-dark">Back</a>
                                 </div>
                             </div>
                         </div>
@@ -110,10 +98,11 @@
     <!-- Custom JS -->
     <!-- <script src="assets/js/script.js"></script> -->
     <script src="assets/js/addProducts.js"></script>
+    <script src="assets/js/updateProduct.js"></script>
     <script>
-        addBtn.addEventListener("click", function () {
+        updateProductElement.addEventListener("click", function () {
                 loadImageAsBase64(function(base64) {
-                addProduct(base64);
+                updateProduct(base64);
                 clearForm();
                 displayData();
             });
