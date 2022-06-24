@@ -13,6 +13,31 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets\css\style.css">
+    <link rel="stylesheet" href="assets/css/count.css">
+    <style>
+        .fa{
+            font-size: 36px;
+            color: #ca1515;
+        }
+        .m{
+            font-size: 36px;
+            color: #ca1515;
+            /* position: absolute; */
+            /* left: 0; */
+            /* top: 4px; */
+            margin-left: 290px;
+        }
+        .b{
+            font-size: 36px;
+            color: #ca1515;
+            margin-left: 285px;
+        }
+        .c{
+            font-size: 36px;
+            color: #ca1515;
+            margin-left: 290px;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-dark">
@@ -47,12 +72,61 @@
             </div>
         </div>
     </nav>
+
+       
+<!-- Discount Section Begin -->
+<section class="discount">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 p-0">
+                <div class="discount__pic">
+                    <img src="assets/images/discount.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 p-0">
+                <div class="discount__text">
+                    <div class="discount__text__title">
+                        <span>Discount</span>
+                        <h2>Summer 2022</h2>
+                        <h5><span>Sale</span> 50%</h5>
+                    </div>
+                    <div class="discount__countdown" id="countdown-time">
+                        <div class="countdown__item">
+                            <span class="day"></span>
+                            <p>Days</p>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="hour"></span>
+                            <p>Hour</p>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="min"></span>
+                            <p>Min</p>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="sec"></span>
+                            <p>Sec</p>
+                        </div>
+                    </div>
+                    <a href="#">Shop now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Discount Section End -->
     
     <main>
         <section class="products mt-5 mb-5">
             <div class="container pt-5 pb-5">
+                <i class="fa fa-car"></i>
+                <i class="fa-solid fa-money-bill m"></i>
+                <i class="fa-solid fa-life-ring b"></i>
+                <i class="fa-solid fa-headphones-simple c"></i>
+               
+        
                 <div class="row" id="cardBody">
-    
+
                 </div>
             </div>
         </section>
@@ -62,8 +136,11 @@
     <script src="assets\vendor\js\bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="Admin/assets/js/addProducts.js"></script>
+    <script src="Admin/assets/js/add-service.js"></script>
+    <script src="assets/js/count.js"></script>
     <script>
         displayProductAtHomePage();
-    </script>
+        ddisplayProductAtHomePage();
+</script>
 </body>
 </html>

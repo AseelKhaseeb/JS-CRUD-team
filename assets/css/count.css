@@ -1,0 +1,135 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    /* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    /* color: #212529; */
+    /* text-align: left; */
+    background-color: #fff;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.discount__pic img{
+min-width: 100%;
+height: 100%;
+}
+.discount__text{
+    background: #f4f4f4;
+    height: 440px;
+    padding: 75px 90px 50px;
+    text-align: center;
+}
+.discount__text__title span{
+    font-size: 12px;
+    color: #111111;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.discount__text__title h2{
+    font-size: 60px;
+    color: #ca1515;
+    font-family: "Cookie", cursive;
+    line-height: 46px;
+    margin-bottom: 10px;
+}
+h2{
+    margin: 0;
+    font-weight: 400;
+}
+.discount__text__title h5{
+    color: #ca1515;
+    font-weight: 700;
+}
+h5{
+    font-size: 18px;
+    line-height: 1.2;
+    font-family: "Montserrat", sans-serif;
+}
+.discount__text__title h5 span{
+    font-size: 14px;
+    color: #111111;
+    margin-right: 4px;
+}
+
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.discount__text__title{
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 60px;
+}
+.discount__text__title:after{
+    position: absolute;
+    left: 50%;
+    top: -38px;
+    height: 183px;
+    width: 183px;
+    background: #ffffff;
+    content: "";
+    border-radius: 50%;
+    z-index: -1;
+    margin-left: -91.5px;
+}
+.discount__countdown{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.countdown__item span{
+    font-size: 30px;
+    font-weight: 600;
+    color: #111111;
+    display: inline-block;
+}
+.countdown__item p{
+    color: #111111;
+    margin-bottom: 0;
+    display: inline-block;
+    font-weight: 500;
+}
+.countdown__item{
+    margin-bottom: 15px;
+    float: left;
+    width: 25%;
+}
+.discount__text a{
+    font-size: 15px;
+    color: #111111;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    padding: 0 0 3px;
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+    background-color: transparent;
+}
+.discount__text a:after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #ca1515;
+    content: "";
+}
