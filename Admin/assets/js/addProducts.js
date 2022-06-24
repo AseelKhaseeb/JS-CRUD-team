@@ -6,7 +6,7 @@ let productSaleInput = document.querySelector("#productSale");
 let addBtn = document.querySelector("#addProduct");
 let tableProducts = document.querySelector("#bodyTable");
 let inputs = document.getElementsByClassName("form-control");
-let cardProducts = document.querySelector("#cardBody");
+let cardProducts = document.querySelector("#cardBodyy");
 let index;
 let count = 0;
 
