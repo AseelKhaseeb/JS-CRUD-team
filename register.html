@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothes Shop</title>
+    <!-- Font awesome 6 -->
+    <link rel="stylesheet" href="assets\vendor\css\all.min.css">
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="assets\vendor\css\bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets\css\style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="index.html">Clothes Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="add-product">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="add-product d-flex flex-column align-items-center mt-5">
+                            <h1>Register</h1>
+                            <div class="form-add-product w-50 border border-dark rounded p-3 m-3">
+                                <div class="mb-3">
+                                    <label for="userName" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="userName" placeholder="user name"
+                                        required />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="userEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="userEmail" placeholder="user email"
+                                        required />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="userPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="userPassword" placeholder="user password"
+                                        required />
+                                </div>
+                                <div class="mb-3 text-center">
+                                    <a href="login.html" class="btn btn-success" id="registerBtn">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- index.html -->
+
+    <!-- Bootstrap 5 JS -->
+    <script src="assets\vendor\js\bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/register.js"></script>
+</body>
+
+</html>

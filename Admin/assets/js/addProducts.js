@@ -8,7 +8,7 @@ let tableProducts = document.querySelector("#bodyTable");
 let inputs = document.getElementsByClassName("form-control");
 let cardProducts = document.querySelector("#cardBodyy");
 let index;
-let count = 0;
+// let count = 0;
 
 let products;
 if (localStorage.getItem("productsList") == null) {
@@ -49,7 +49,7 @@ function addProduct(imgBase64) {
   };
   products.push(product);
   localStorage.setItem("productsList", JSON.stringify(products));
-  count++;
+  // count++;
 }
 
 function displayData() {
@@ -74,7 +74,7 @@ function displayData() {
   }
   tableProducts.innerHTML = DisplayProductForAdmin;
 }
-{/* <a href="../../products.html"></a> */}
+
 function displayProductAtHomePage() {
   let displayProductDetails = "";
   for (let i = 0; i < products.length; i++) {

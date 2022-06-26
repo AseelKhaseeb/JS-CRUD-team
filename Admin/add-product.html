@@ -104,9 +104,13 @@
     <script>
         addBtn.addEventListener("click", function () {
                 loadImageAsBase64(function(base64) {
+                    console.log("take image");
                 addProduct(base64);
+                console.log("add product");
                 clearForm();
+                console.log("clear form");
                 displayData();
+                console.log("display product");
             });
         });
     </script>
