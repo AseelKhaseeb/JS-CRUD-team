@@ -26,3 +26,25 @@ h1 {
 .body.rainy {
     background-image: linear-gradient(to right top, #637c7b, #718e8c, #7ea09e, #8db2b0, #9bc5c3);
 }
+.fa{
+    font-size: 36px;
+    color: #ca1515;
+}
+.m{
+    font-size: 36px;
+    color: #ca1515;
+    /* position: absolute; */
+    /* left: 0; */
+    /* top: 4px; */
+    margin-left: 290px;
+}
+.b{
+    font-size: 36px;
+    color: #ca1515;
+    margin-left: 285px;
+}
+.c{
+    font-size: 36px;
+    color: #ca1515;
+    margin-left: 290px;
+}

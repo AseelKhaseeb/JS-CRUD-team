@@ -1,25 +1,18 @@
-// let url_string = window.location.href; //window.location.href
-// let url = new URL(url_string);
-// let id = url.searchParams.get("id");
-// let serviceIndex;
-// let updateProductElement = document.querySelector("#updateProduct");
+let url_string = window.location.href; //window.location.href
+let url = new URL(url_string);
+let id = url.searchParams.get("id");
+let serviceIndex;
+let updateServiceElement = document.querySelector("#updateService");
 
-// function getProductData(indexNew) {
-//     serviceNameInput.value = services[indexNew].name;
-//     serviceDescriptionInput.value = services[indexNew].desc;
-//     // productPriceInput.value = products[indexNew].price;
-//     // productSaleInput.value = products[indexNew].sale;
+function getProductData(indexNew) {
+    serviceNameInput.value = services[indexNew].name;
+    serviceDescriptionInput.value = services[indexNew].desc;
+    serviceIndex = indexNew;
+}
+getProductData(id);
 
-//    serviceIndex = indexNew;
-// }
-// getProductData(id);
-
-// function updateProduct() {
-//     services[serviceIndex].name = serviceNameInput.value;
-//     // products[productIndex].img1 = base64 || products[productIndex].img1;
-//     services[serviceIndex].desc = serviceDescriptionInput.value;
-//     // products[productIndex].price = productPriceInput.value;
-//     // products[productIndex].sale = productSaleInput.value;
-
-//     localStorage.setItem("serviceList",JSON.stringify(services));
-// }
+function updateService() {
+    services[serviceIndex].name = serviceNameInput.value;
+    services[serviceIndex].desc = serviceDescriptionInput.value;
+    localStorage.setItem("serviceList",JSON.stringify(services));
+}

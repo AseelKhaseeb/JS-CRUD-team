@@ -34,6 +34,11 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
                 <a class="nav-link active text-white" aria-current="page" href="products.html"
                   >Products</a
                 >
@@ -116,13 +121,9 @@
     <script>
         addBtn.addEventListener("click", function () {
                 loadImageAsBase64(function(base64) {
-                    console.log("take image");
                 addProduct(base64);
-                console.log("add product");
                 clearForm();
-                console.log("clear form");
                 displayData();
-                console.log("display product");
             });
         });
     </script>

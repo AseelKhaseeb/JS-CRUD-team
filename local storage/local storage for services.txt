@@ -1,0 +1,1 @@
+[{"name":"Free Shipping","desc":"For all order over $99"},{"name":"Money Back Guarantee","desc":"If good have Problems"},{"name":"Online Support 24/7","desc":"Dedicated support"},{"name":"Payment Secure","desc":"100% secure payment"}];

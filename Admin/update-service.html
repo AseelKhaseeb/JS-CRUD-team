@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clothes Shop</title>
+    <!-- Font awesome 6 -->
+    <link rel="stylesheet" href="assets\vendor\css\all.min.css" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="assets\vendor\css\bootstrap.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets\css\style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="index.html">Clothes Shop</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="products.html"
+                  >Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white-50" href="services.html">Services</a>
+              </li>
+            </ul>
+          </div>
+          <div class="welcom-admin text-white position-relative me-4">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Welcome Admin
+            </a>
+            <ul
+              class="dropdown-menu position-absolute end-0 "
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <main>
+        <section class="add-product">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="add-product d-flex flex-column align-items-center">
+                            <h1>Add Service</h1>
+                            <div class="form-add-product w-50 border border-dark rounded p-3 m-3">
+                                <div class="mb-3">
+                                    <label for="productName" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="productName"
+                                        placeholder="service name" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="productName" class="form-label">Description</label>
+                                    <input type="text" class="form-control" id="descriptionName"
+                                        placeholder="service description" />
+                                </div>
+                                <!-- <div class="mb-3">
+                                    <label for="image2" class="form-label">Image2</label>
+                                    <input class="form-control images" type="file" id="image2"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="image3" class="form-label">Image3</label>
+                                    <input class="form-control images" type="file" id="image3"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="image4" class="form-label">Image4</label>
+                                    <input class="form-control images" type="file" id="image4"/>
+                                </div> -->
+                                <!-- <div class="mb-3">
+                                    <label for="productPieces" class="form-label">Pieces</label>
+                                    <input type="number" class="form-control" id="productPieces" placeholder="pieces" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="productPrice" class="form-label">Price</label>
+                                    <input type="number" class="form-control" id="productPrice"
+                                        placeholder="product price" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="productSale" class="form-label">Sale</label>
+                                    <input type="number" class="form-control" id="productSale"
+                                        placeholder="product sale" />
+                                </div> -->
+                                <div class="text-center">
+                                    <a href="#" class="btn btn-primary" id="updateService">Update</a>
+                                    <a href="services.html" class="btn btn-dark">Back</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>    
+<!-- Bootstrap 5 JS -->
+<script src="assets\vendor\js\bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="assets/js/add-service.js"></script>
+<script src="assets/js/update-service.js"></script>
+<script>
+    updateServiceElement.addEventListener("click", function () {
+            // loadImageAsBase64(function(base64) {
+              console.log("hhh");
+              updateService();
+              clearForm();
+              displayData();
+    });
+</script>
+
+</body>
+</html>

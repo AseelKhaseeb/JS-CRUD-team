@@ -40,7 +40,7 @@ function loadImageAsBase64(onLoadSuccess) {
 }
 
 function addProduct(imgBase64) {
-  product = {
+  var product = {
     name: productNameInput.value,
     img1: imgBase64,
     pieces: productPiecesInput.value,

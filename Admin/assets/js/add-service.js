@@ -24,34 +24,10 @@ if (localStorage.getItem("serviceList") == null) {
   // count = services.length;
   displayData();
 }
-
-// function loadImageAsBase64(onLoadSuccess) {
-//   const file = image1Input.files[0];
-//   const reader = new FileReader(); //read selected file
-
-//   reader.addEventListener(
-//     "load",
-//     function () {
-//       // convert image file to base64 string
-//       onLoadSuccess(reader.result);
-//     },
-//     false
-//   );
-
-//   if (file) {
-//     reader.readAsDataURL(file);
-//   } else {
-//     onLoadSuccess();
-//   }
-// }
-
 function addservice() {
   var service = {
     name: serviceNameInput.value,
     desc: serviceDescriptionInput.value,
-    // pieces: productPiecesInput.value,
-    // price: productPriceInput.value,
-    // sale: productSaleInput.value,
   };
   services.push(service);
   localStorage.setItem("serviceList", JSON.stringify(services));
@@ -67,7 +43,7 @@ function displayData() {
                 <td class="w-25">${services[i].name}</td>
                 <td>${services[i].desc}</td>
                 <td>
-                    <a href="add-service.html?id=${i}" class="btn btn-outline-primary" onclick="getProductData(${i})">update</a></td>
+                    <a href="update-service.html?id=${i}" class="btn btn-outline-primary" onclick="getProductData(${i})">update</a></td>
                 <td><a href="" class="btn btn-outline-danger" onclick="deleteProduct(${i})">delete</a></td>  
             </tr>` ;
   }
@@ -97,32 +73,6 @@ function clearForm() {
     inputss[i].value = "";
   }
 }
-
-// function getProductData(index) {
-//     var service = services[index];
-//     console.log(service)
-//     serviceNameInput.value = service.name;
-//     serviceDescriptionInput.value = service.desc;
-//     // coursePrice.value = Course.price;
-//     // courseDescription.value = Course.description;
-//     // btn.innerHTML = "Update Course";
-//     currentIndex = index;
-// }
-
-// function updateProduct() {
-//     var service = {
-//         name : serviceNameInput.value,
-//         desc: serviceDescriptionInput.value,
-//         // price: coursePrice.value,
-//         // description:courseDescription.value
-//     };
-//     services[currentIndex].name=service.name;
-//     services[currentIndex].desc=service.desc;
-//     // services[currentIndex].price=Course.price;
-//     // services[currentIndex].description=Course.description;
-//     // localStorage.setItem("coursesItem",JSON.stringify(services));
-//     localStorage.setItem("serviceList", JSON.stringify(services));
-// }
 function deleteProduct(index){
   services.splice(index, 1);
   localStorage.setItem("serviceList",JSON.stringify(services));
