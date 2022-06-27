@@ -1,5 +1,5 @@
 .body {
-    
+
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: #fff;
@@ -48,4 +48,11 @@ h1 {
     font-size: 36px;
     color: #ca1515;
     margin-left: 290px;
+}
+.name-service{
+    font-size: 20px;
+    font-weight: 600;
+}
+.mar{
+    margin-bottom: 27px;
 }

@@ -53,15 +53,17 @@ function ddisplayProductAtHomePage() {
   let ddisplayProductDetails = "";
   for (let i = 0; i < services.length; i++) {
     ddisplayProductDetails += `
-<div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="product-item me-3 mb-3">
+<div class="col-lg-3 col-md-4 col-sm-6 mar">
+            <div class="product-item me-3">
+            <div class = "card">
                     <div class="card-body">
                         <div>
-                            <h4 class="">${services[i].name}</h4>
+                            <h4 class="name-service">${services[i].name}</h4>
                         </div>
                         <span class="">${services[i].desc}</span>
                     </div>
                 </div>
+            </div>
             </div>
         `;
   }
