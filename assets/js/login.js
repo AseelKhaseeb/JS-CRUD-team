@@ -15,9 +15,6 @@ function loginDone(){
         if((userEmailInput.value == loginInfo[i].email) && (userPasswordInput.value == loginInfo[i].password)){
             localStorage.setItem("logged",JSON.stringify("logged"));
             break;
-        }else{
-            localStorage.setItem("logged",JSON.stringify("notLogged"));
-            break;
         }
     }
 }
