@@ -38,3 +38,11 @@ $("a").click(function(e){
     $("html,body").animate({scrollTop:sectionOffset},2000);
 })
 //scroll behavior end
+
+//loading screen start
+$(document).ready(function(){
+    $(".loading .lds-heart").fadeOut(3000);
+    $(".loading").fadeOut(3000);
+    $("body").css("overflow","auto")
+})
+//loading screen end
