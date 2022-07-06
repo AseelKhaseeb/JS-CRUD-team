@@ -56,9 +56,12 @@ h1 {
 .mar{
     margin-bottom: 27px;
 }
+/* Navbar start */
 .navbar{
     background-color: #111111;
 }
+/* Navbar end */
+/* Header content start */
 .header-content{
     margin-top: 56px;
     background-image: url(../images/banner-1.jpg);
@@ -69,6 +72,8 @@ h1 {
     position: relative;
     /*background-size: 120% auto;*/
 }
+/* Header content end */
+/* Carousel start */
 .carousel-caption{
     bottom: 150px;
 }
@@ -116,6 +121,8 @@ a:hover {
     width: 87px;
     height: 2px;
 }
+/* Carousel end */
+/* Categories section start */
 .categories{
     overflow: hidden;
     margin-top: 20px;
@@ -196,3 +203,13 @@ a:hover {
 .categories .line{
     margin: 0;
 }
+/* Categories section end */
+/* Smooth scroll btn start */
+#btnup{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+
+}
+/* Smooth scroll btn end */
