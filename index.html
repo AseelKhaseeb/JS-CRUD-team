@@ -25,7 +25,7 @@
     
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="index.html">Fashion Shop</a>
             <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -105,11 +105,11 @@
       </div>
       <!-- Header content End -->
       <!-- Categories section Start -->
-      <section class="categories">
+      <section class="categories" id="categories">
         <div class="container-fluid">
           <div class="row">
                   <div class="col-lg-6 p-0">
-                      <div class="women">
+                      <div class="women" id="backgroundImage">
                         <div class="category__content">
                             <h1 class="text-start">Women's fashion</h1>
                             <p>Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-unt labore edolore magna aliquapendisse ultrices gravida.</p>
@@ -177,7 +177,7 @@
         </section>
         <!-- Products Section End -->
         <!-- Discount Section Begin -->
-        <section class="discount">
+        <section class="discount" id="discount">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 p-0">
@@ -232,7 +232,7 @@
         </section>
         <!-- Services Section End -->
         <!-- API Section Start -->
-        <section class="api">
+        <section class="api" id="temprature">
             <div class="body">
                 <div class="bg"></div>
                 <div>
@@ -247,6 +247,8 @@
     
     <!-- Bootstrap 5 JS -->
     <script src="assets\vendor\js\bootstrap.bundle.min.js"></script>
+    <!-- Jquery 3.6.0 -->
+    <script src="assets\vendor\js\jquery-3.6.0.min.js"></script>
     <!-- Custom JS -->
     <script src="Admin/assets/js/addProducts.js"></script>
     <script src="Admin/assets/js/add-service.js"></script>
@@ -256,6 +258,7 @@
     <script src="assets/js/logout.js"></script>
     <script src="assets/js/api.js"></script>
     <script src="assets/js/new.js"></script>
+    <script src="assets/js/script.js"></script>
     <script>
         displayProductAtHomePage();
         ddisplayProductAtHomePage();

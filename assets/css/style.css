@@ -56,6 +56,9 @@ h1 {
 .mar{
     margin-bottom: 27px;
 }
+.navbar{
+    background-color: #111111;
+}
 .header-content{
     margin-top: 56px;
     background-image: url(../images/banner-1.jpg);
