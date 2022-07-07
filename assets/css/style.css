@@ -59,13 +59,15 @@ h1 {
 .mar{
     margin-bottom: 27px;
 }
+
 /* Navbar start */
 .navbar{
     background-color: #111111;
 }
 /* Navbar end */
+
 /* Header content start */
-.header-content{
+/*.header-content{
     margin-top: 56px;
     background-image: url(../images/banner-1.jpg);
     background-size:cover;
@@ -73,11 +75,12 @@ h1 {
     background-position:top center;
     height: 87vh; 
     position: relative;
-    /*background-size: 120% auto;*/
-}
+    background-size: 120% auto;
+}*/
 /* Header content end */
-/* Carousel start */
-.carousel-caption{
+
+/* bootstrap Carousel start */
+/*.carousel-caption{
     bottom: 150px;
 }
 .carousel-inner{
@@ -123,8 +126,66 @@ a:hover {
     margin: auto;
     width: 87px;
     height: 2px;
+}*/
+/* Bootstrap Carousel end */
+
+/* Owl carousel start */
+.background__img{
+    background-image: url(../images/banner-1.jpg);
+    background-size: cover;
+    height: 87vh;
+    background-position:top center;
+    margin-top: 56px;
 }
-/* Carousel end */
+.slider{
+    padding: 150px 0 0;
+}
+.owl-carousel h5{
+    color: #ca1515; 
+}
+.owl-carousel h1{
+    color: #111111;
+    font-family: "Cookie", cursive;
+}
+.slider.owl-carousel .owl-dots{
+    position: absolute;
+    left: 0;
+    top: 430px;
+    width: 100%;
+    text-align: center;
+}
+.slider.owl-carousel button{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #a1a1a1;
+    margin-right: 10px;
+}
+
+.slider.owl-carousel button.active{
+    background: #ca1515; 
+}
+.shop__now{
+    color: #111111;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 3px;
+    display: inline-block;
+    padding-top: 10px;
+}
+a:hover {
+    color:#111111;
+}
+.line{
+    display: block;
+    background-color: #ca1515;
+    text-align: center;
+    margin: auto;
+    width: 87px;
+    height: 2px;
+}
+/* Owl carousel end */
+
 /* Categories section start */
 .categories{
     overflow: hidden;

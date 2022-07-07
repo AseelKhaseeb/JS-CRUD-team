@@ -35,7 +35,7 @@ $("#btnup").click(function(){
 $("a").click(function(e){
     let attr=$(e.target).attr('href');
     let sectionOffset= $(attr).offset().top;
-    $("html,body").animate({scrollTop:sectionOffset},2000);
+    $("html,body").animate({scrollTop:sectionOffset},{duration:2000},{easing:"easeInOutExpo"});
 })
 //scroll behavior end
 
@@ -46,3 +46,18 @@ $(document).ready(function(){
     $("body").css("overflow","auto")
 })
 //loading screen end
+
+//Owl carousel start
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        items:1,
+        loop:true,
+        margin:0,
+        dots:true,
+        smartSpeed:1200,
+        autoHeight: false,
+        autoplay: true,
+    });
+  });
+
+//Owl carousel end
