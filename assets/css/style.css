@@ -42,6 +42,28 @@ h1 {
     /* top: 4px; */
     margin-left: 290px;
 }
+.text{
+    font-size: 14px;
+    color: #666666;
+    line-height: 24px;
+}
+
+.des{
+    width: 70%;
+   
+}
+.scoial{
+    transition: all 2s;
+}
+.scoial:hover{
+color: white;
+background-color: #666666;
+
+}
+.bg-color1{
+    background-color: #e1e1e1;
+}
+
 .b{
     font-size: 36px;
     color: #ca1515;
