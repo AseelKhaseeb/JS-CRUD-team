@@ -84,7 +84,7 @@ function displayLinksAtHome() {
    
 
 function clearForm() {
-    for (i = 0; i < inputs.length; i++) {
+    for (i = 0; i < inputsss.length; i++) {
         inputsss[i].value = "";
     }
 }
