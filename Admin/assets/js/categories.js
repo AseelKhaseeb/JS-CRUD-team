@@ -14,12 +14,6 @@ else {
     displayData();
 }
 
-    deleteAll.onclick=function(){
-        localStorage.removeItem("categoriesList");
-        categories=[];
-        categoryData.innerHTML="";
-    }
-
 
     addBtn.addEventListener = function(){
         addCategory();
@@ -69,5 +63,10 @@ else {
         displayData();
     }
 
+    deleteAll.onclick=function(){
+        localStorage.removeItem("categoriesList");
+        categories=[];
+        categoryData.innerHTML="";
+    }
     
-    
+
