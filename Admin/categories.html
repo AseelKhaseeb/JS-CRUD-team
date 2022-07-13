@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashion Shop</title>
     <!-- Font awesome 6 -->
     <link rel="stylesheet" href="assets\vendor\css\all.min.css" />
@@ -14,6 +14,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets\css\style.css" />
+    <link rel="stylesheet" href="assets\css\categories.css">
 </head>
 
 <body>
@@ -79,42 +80,33 @@
       </nav>
 
     <main>
-        <section class="add-product">
-            <div class="container">
+        <section class="categories">
+            <div class="container mt-5">
                 <div class="row">
                     <div class="col">
-                        <div class="add-product d-flex flex-column align-items-center">
-                            <h1>Add product</h1>
-                            <div class="form-add-product w-50 border border-dark rounded p-3 m-3">
-                                <div class="mb-3">
-                                    <label for="productName" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="productName"
-                                        placeholder="product name" />
-                                </div>
-                                <div class="mb-3">
-                                    <label for="image1" class="form-label">Image1</label>
-                                    <input class="form-control images" type="file" id="image1"/>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="productPieces" class="form-label">Pieces</label>
-                                    <input type="number" class="form-control" id="productPieces" placeholder="pieces" />
-                                </div>
-                                <div class="mb-3">
-                                    <label for="productPrice" class="form-label">Price</label>
-                                    <input type="number" class="form-control" id="productPrice"
-                                        placeholder="product price" />
-                                </div>
-                                <div class="mb-3">
-                                    <label for="productSale" class="form-label">Sale</label>
-                                    <input type="number" class="form-control" id="productSale"
-                                        placeholder="product sale" />
-                                </div>
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-outline-primary" id="addProduct">Submit</a>
-                                    <a href="products.html" class="btn btn-outline-dark">Back</a>
-                                </div>
-                            </div>
+                        <div class="title-addButton mb-3 d-flex justify-content-between align-items-center">
+                            <h1>All Categories</h1>
+                            <button id="deleteAll" class="btn btn-outline-success">Delete all</button>
+                            <a href="add-category.html" class="btn btn-info">Add new category</a>
                         </div>
+                        
+                        <div class="table-category">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Category title</th>
+                                    <th scope="col">Background Image</th>
+                                    <th scope="col">Description</th>
+                                  </tr>
+                                </thead>
+                                
+                                <tbody id="categoryData">
+                                  
+                                </tbody>
+                              </table>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -122,20 +114,9 @@
     </main>
 
     <!-- Bootstrap 5 JS -->
-    <script src="assets\vendor\js\bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/js/bootstrap.bundle.min.js"></script> 
     <!-- Custom JS -->
-    <!-- <script src="assets/js/script.js"></script> -->
-    <script src="assets/js/addProducts.js"></script>
-    <script>
-        addBtn.addEventListener("click", function () {
-                loadImageAsBase64(function(base64) {
-                  addProduct(base64);
-                  clearForm();
-                  displayData();
-            });
-        });
-    </script>
-
+    <script src="assets/js/categories.js"></script>
 </body>
 
 </html>

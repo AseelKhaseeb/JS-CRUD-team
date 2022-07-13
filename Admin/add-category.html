@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets\vendor\css\bootstrap.min.css" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets\css\style.css" />
+    <link rel="stylesheet" href="assets\css\categories.css">
 </head>
 
 <body>
@@ -55,7 +55,6 @@
                 <a class="nav-link text-white-50" href="../Admin/footer-html/footer.html">Footer</a>
               </li>
             </ul>
-
           </div>
           <div class="welcom-admin text-white position-relative me-4">
             <a
@@ -80,39 +79,30 @@
       </nav>
 
     <main>
-        <section class="updateProduct">
+        <section class="add-category">
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <div class="update-product d-flex flex-column align-items-center">
-                            <h1>Update product</h1>
-                            <div class="form-update-product w-50 border border-dark rounded p-3 m-3">
+                        <div class="add-category d-flex flex-column justify-content-center align-items-center">
+                            <h1 class="mt-3">Add Category</h1>
+                            <div class="form-add-product w-50 border border-dark rounded p-3 m-3">
                                 <div class="mb-3">
-                                    <label for="productName" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="productName"
-                                        placeholder="product name" />
+                                    <label for="categoryTitle" class="form-label">Category Title</label>
+                                    <input type="text" class="form-control" id="categoryTitle"
+                                        placeholder="Enter category title" />
                                 </div>
                                 <div class="mb-3">
-                                    <label for="image1" class="form-label">Image1</label>
-                                    <input class="form-control images" type="file" id="image1"/>
+                                    <label for="backgroundImage" class="form-label">Background Image</label>
+                                    <input class="form-control images" type="file" id="backgroundImage"/>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="productPieces" class="form-label">Pieces</label>
-                                    <input type="number" class="form-control" id="productPieces" placeholder="pieces" />
+                                    <label for="description" class="form-label">Description</label>
+                                    <input type="text" class="form-control" id="description" placeholder="Enter description" />
                                 </div>
-                                <div class="mb-3">
-                                    <label for="productPrice" class="form-label">Price</label>
-                                    <input type="number" class="form-control" id="productPrice"
-                                        placeholder="product price" />
-                                </div>
-                                <div class="mb-3">
-                                    <label for="productSale" class="form-label">Sale</label>
-                                    <input type="number" class="form-control" id="productSale"
-                                        placeholder="product sale" />
-                                </div>
+
                                 <div class="text-center">
-                                    <a href="products.html" class="btn btn-outline-primary" id="updateProduct">Update</a>
-                                    <a href="products.html" class="btn btn-outline-dark">Back</a>
+                                    <a href="categories.html" class="btn btn-outline-primary" id="addCategory">Submit</a>
+                                    <a href="categories.html" class="btn btn-outline-dark">Back</a>
                                 </div>
                             </div>
                         </div>
@@ -123,21 +113,17 @@
     </main>
 
     <!-- Bootstrap 5 JS -->
-    <script src="assets\vendor\js\bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
-    <!-- <script src="assets/js/script.js"></script> -->
-    <script src="assets/js/addProducts.js"></script>
-    <script src="assets/js/updateProduct.js"></script>
+    <script src="assets/js/categories.js"></script>
     <script>
-        updateProductElement.addEventListener("click", function () {
-                loadImageAsBase64(function(base64) {
-                  updateProduct(base64);
-                  clearForm();
-                  displayData();
-            });
-        });
+       addBtn.addEventListener = function(){
+        addCategory();
+        displayData();
+        clearForm();
+    };
     </script>
-
+    
 </body>
 
 </html>
