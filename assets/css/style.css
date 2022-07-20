@@ -162,6 +162,17 @@ a:hover {
     background-position:top center;
     margin-top: 56px;
 }
+@media screen and (min-width: 577px) and (max-width:768px){
+    .background__img{
+        height: 55vh;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .background__img{
+        height: 47vh;
+    }
+}
+
 .slider{
     padding: 150px 0 0;
 }
@@ -171,6 +182,11 @@ a:hover {
 .owl-carousel h1{
     color: #111111;
     font-family: "Cookie", cursive;
+}
+@media screen and (max-width:576px){
+    .owl-carousel h1{
+        font-size: 55px;
+    }
 }
 .slider.owl-carousel .owl-dots{
     position: absolute;
@@ -238,6 +254,33 @@ a:hover {
     align-items: center;
     margin-right: 25px;
 }
+@media screen and (max-width:576px){
+    .women{
+        margin-right: auto;
+        height: 100vh;
+        margin-bottom: 10px;
+    }
+    .women h1{
+        font-size: 63px;;
+    }
+}
+@media screen and (min-width: 577px) and (max-width:768px){
+    .women{
+        margin-right: auto;
+        margin-bottom: 10px;
+    } 
+}
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .women{
+        margin-right: auto;
+        margin-bottom: 10px;
+    } 
+}
+@media screen and (min-width: 993px) and (max-width: 1200px){
+    .women{
+        margin-right: auto;
+    } 
+}
 .men{
     background-image: url(../images/category-2.jpg);
     background-size: cover;
@@ -250,6 +293,27 @@ a:hover {
     margin-right: 10px;
 
 }
+@media screen and (max-width:576px){
+    .men{
+        padding-left: 25px;
+    }
+    
+}
+@media screen and (min-width: 577px) and (max-width:768px){
+    .men{
+        padding-left: 25px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .men{
+        padding-left: 20px;
+    }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px){
+    .men{
+        padding-left: 25px;
+    }
+}
 .kids{
     background-image: url(../images/category-3.jpg);
     background-size: cover;
@@ -259,6 +323,11 @@ a:hover {
     display: flex;
     align-items: center;
     margin-bottom:10px;
+}
+@media screen and (max-width:576px){
+    .kids{
+        padding-left: 25px;
+    } 
 }
 .cosmetics{
     background-image: url(../images/category-4.jpg);
@@ -270,6 +339,27 @@ a:hover {
     align-items: center;
     margin-right: 10px;
 }
+@media screen and (max-width:576px){
+    .cosmetics{
+        padding-left: 25px;
+        margin-bottom: 10px;
+    } 
+}
+@media screen and (min-width: 577px) and (max-width:768px){
+    .cosmetics{
+        padding-left: 25px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .cosmetics{
+        padding-left: 20px;
+    }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px){
+    .cosmetics{
+        padding-left: 25px;
+    }
+}
 .accessories{
     background-image: url(../images/category-5.jpg);
     background-size: cover;
@@ -279,15 +369,42 @@ a:hover {
     display: flex;
     align-items: center;
 }
+@media screen and (max-width:576px){
+    .accessories{
+        padding-left: 25px;
+        margin-bottom: 10px;
+    } 
+}
 .category__content{
    padding-left:70px;
 }
+@media screen and (max-width:576px){
+    .category__content{
+        padding-left:40px;
+     }
+}
+
 .category__content__small{
     padding-left:30px;
  }
 .categories p{
     font-size: 14px;
     margin-bottom: 10px;
+}
+@media screen and (min-width: 577px) and (max-width:768px){
+    .categories p{
+        width: 65%;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .categories p{
+        width: 60%;
+    }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px){
+    .categories p{
+        width: 93%;
+    }
 }
 .categories .line{
     margin: 0;
