@@ -147,6 +147,13 @@ text-decoration: none;
 transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 margin: 20px;
 }
+
+.API{
+    background-color: red;
+    border-radius: 59px;
+    width: 93px;
+    text-align: center;
+}
 /* Navbar end */
 
 /* Header content start */
