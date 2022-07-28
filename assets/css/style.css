@@ -154,6 +154,25 @@ margin: 20px;
     width: 93px;
     text-align: center;
 }
+.mm::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width .3s;
+    position: absolute;
+    top: 36px;
+    left: 8px;
+    
+}
+.mm:hover::after{
+    width: 100%;
+    transition: width 0.8s;
+
+}
+
+
 /* Navbar end */
 
 /* Header content start */
