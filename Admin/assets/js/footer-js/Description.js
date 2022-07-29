@@ -49,6 +49,13 @@ function addDescription() {
     }
    pagDescription.push(des);
     localStorage.setItem("descriptionList", JSON.stringify(pagDescription));
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 2000
+      })  
 };
 
 
@@ -63,9 +70,9 @@ function displayDescription() {
      <td> ${i}</td>
      
      <td>${pagDescription[i].description}</td>
-     <td>  <button class="bg-card3 text-white  border-0 p-2 rounded-2" onClick=deleteDescription(${i})>delete</button> </td>
      <td>  <button  class="bg-card3 text-white  border-0 p-2 rounded-2" onClick=getDescription(${i}) >  update </button></td>
-      </tr>`
+     <td>  <button class="bg-card3 text-white  border-0 p-2 rounded-2" onClick=deleteDescription(${i})>delete</button> </td> 
+     </tr>`
     }
     data1.innerHTML = result;
 }
@@ -95,9 +102,26 @@ function clearForm() {
 }
 
 function deleteDescription(index) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+    if (result.isConfirmed) { 
     pagDescription.splice(index, 1);
     localStorage.setItem("descriptionList", JSON.stringify(pagDescription));
     displayDescription();
+    Swal.fire(
+        'Deleted!',
+        'Your discription has been deleted.',
+        'success'
+              )
+            }
+          })
 }
 function getDescription(index) {
     var pagDes=pagDescription[index]
@@ -112,6 +136,13 @@ function updateDescription() {
 
     pagDescription[currentIndex].description=des.description;
     localStorage.setItem("descriptionList" ,JSON.stringify(pagDescription));
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1500
+      })
  
 }
 

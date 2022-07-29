@@ -32,12 +32,19 @@ function addservice() {
   services.push(service);
   localStorage.setItem("serviceList", JSON.stringify(services));
   // count++;
+  Swal.fire({
+    position: 'top-center',
+    icon: 'success',
+    title: 'Your work has been saved',
+    showConfirmButton: false,
+    timer: 2000
+  })  
 }
 
 function displayData() {
-  let result = "";
+  let resulttt = "";
   for (let i = 0; i < services.length; i++) {
-    result += `
+    resulttt += `
             <tr>
                 <th>${i + 1}</th>
                 <td class="w-25">${services[i].name}</td>
@@ -47,7 +54,7 @@ function displayData() {
                 <td><a href="" class="btn btn-outline-danger" onclick="deleteProduct(${i})">delete</a></td>  
             </tr>` ;
   }
-  tableProductss.innerHTML = result;
+  tableProductss.innerHTML = resulttt;
 }
 function ddisplayProductAtHomePage() {
   let ddisplayProductDetails = "";

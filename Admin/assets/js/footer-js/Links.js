@@ -51,6 +51,13 @@ function addLinks() {
 
     pagLinks.push(lin);
     localStorage.setItem("linkList", JSON.stringify(pagLinks));
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 2000
+      })  
 };
 
 function displayLinks() {
@@ -62,9 +69,9 @@ function displayLinks() {
      <td> ${i}</td>
      
      <td >${pagLinks[i].links}</td>
-     <td>  <button class="bg-card2 text-white  border-0 p-2 rounded-2" onClick=deleteLinks(${i})>delete</button> </td>
      <td>  <button class="bg-card2 text-white  border-0 p-2 rounded-2" onClick=getLink(${i})>update</button></td>
-      </tr>`
+     <td>  <button class="bg-card2 text-white  border-0 p-2 rounded-2" onClick=deleteLinks(${i})>delete</button> </td> 
+     </tr>`
     }
     data2.innerHTML = result;
 }
@@ -92,9 +99,26 @@ function clearForm() {
 
 
 function deleteLinks(index) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+    if (result.isConfirmed) { 
     pagLinks.splice(index, 1);
     localStorage.setItem("linkList", JSON.stringify(pagLinks));
     displayLinks();
+    Swal.fire(
+        'Deleted!',
+        'Your link has been deleted.',
+        'success'
+              )
+            }
+          })
 }
 
 function getLink(index) {
@@ -110,6 +134,13 @@ function updateLinks() {
 
     pagLinks[currentIndex].links=lin.links;
     localStorage.setItem("linkList" ,JSON.stringify(pagLinks));
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1500
+      })
  
 }
 

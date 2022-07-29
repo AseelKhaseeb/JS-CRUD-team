@@ -50,6 +50,13 @@ function addAccount() {
 
     pagAccount.push(acc);
     localStorage.setItem("accountList", JSON.stringify(pagAccount));
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 2000
+      })  
 };
 
    
@@ -63,8 +70,8 @@ function displayAccount() {
      <td> ${i}</td>
      
      <td>${pagAccount[i].account}</td>
-     <td>  <button class="text-white bg-card1 border-0 p-2 rounded-2" onClick=deleteAccount(${i})>delete</button> </td>
      <td>  <button class="text-white bg-card1  border-0 p-2 rounded-2" onClick=getAccount(${i})>update</button></td>
+     <td>  <button class="text-white bg-card1 border-0 p-2 rounded-2" onClick=deleteAccount(${i})>delete</button> </td>
       </tr>`
     }
     data3.innerHTML = result;
@@ -91,9 +98,26 @@ function clearForm() {
 }
 
 function deleteAccount(index) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+    if (result.isConfirmed) {   
     pagAccount.splice(index, 1);
     localStorage.setItem("accountList", JSON.stringify(pagAccount));
     displayAccount();
+    Swal.fire(
+        'Deleted!',
+        'Your account has been deleted.',
+        'success'
+              )
+            }
+          })
 }
 
 function getAccount(index) {
@@ -109,6 +133,13 @@ function updateAccount() {
 
     pagAccount[currentIndex].account=acc.account;
     localStorage.setItem("accountList" ,JSON.stringify(pagAccount));
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1500
+      })
  
 }
 

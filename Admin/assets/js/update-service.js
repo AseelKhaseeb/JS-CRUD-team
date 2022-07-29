@@ -15,4 +15,11 @@ function updateService() {
     services[serviceIndex].name = serviceNameInput.value;
     services[serviceIndex].desc = serviceDescriptionInput.value;
     localStorage.setItem("serviceList",JSON.stringify(services));
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1500
+      })
 }
